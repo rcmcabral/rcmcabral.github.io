@@ -1,7 +1,85 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+*
+{
+	font-family: Roboto;
+}
+
+#dogdiv
+{
+	width: 500px;
+	//height: 500px;
+	display: block;
+	//background-color: blue;
+}
+#imgdiv
+{
+	width: inherit;
+	//height: inherit;
+}
+#imgdiv > img
+{
+	width: inherit;
+	//height: inherit;
+}
+#boopdiv
+{
+	//display: none;
+}
+#boopdiv > div
+{
+	display: block;
+    position: absolute;
+    //background-color: red;
+    margin-left: 222px;
+    width: 70px;
+    height: 50px;
+    margin-top: 144px;
+}
+#boopdiv > div > p
+{
+	font-weight: bold;
+	text-align: center;
+	margin-top: 18px;
+	margin-left: 2px;
+	display: none;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
 <body>
-<h1>Hello World!</h1>
-<p>This site is currently under maintenance as I figure out Github pages.</p>
+<h1 class="page-title">Hello World!</h1>
+<p>This site is currently under maintenance as I gather old and new (and some fun) projects to add to it.</p>
+<p>Here's a random doggo for your efforts. Feel free to boop.</p>
+<div id="dogdiv">
+	<div id="boopdiv">
+		<div><p>B O O P</p></div>
+	</div>
+	<div id="imgdiv">
+		<img id="dogimg" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F37%2F2020%2F09%2F22%2F50-cute-dog-names.jpg" alt="Random doggo from the internet">
+	</div>	
+</div
+<p>Hope you have an awesome day!</p>
+
+
+
+<script>
+$(document).ready(function(){
+	$("#boopdiv > div").hover(function(){
+		$("#boopdiv > div > p").show();
+		$("#imgdiv > img").css("opacity", "0.5");
+		console.log("Thanks for the boop!")
+	},
+	function(){
+		$("#boopdiv > div > p").hide();
+		$("#imgdiv > img").css("opacity", "1.0");
+	});
+});
+</script>
 </body>
 </html>
+
